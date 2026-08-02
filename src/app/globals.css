@@ -1,0 +1,218 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+/* ---------------------------------------------------------------------- */
+/* Design tokens                                                          */
+/* ---------------------------------------------------------------------- */
+:root {
+  --radius: 0.75rem;
+
+  /* Dark is the default aesthetic */
+  --background: 240 25% 4%;
+  --foreground: 240 20% 97%;
+
+  --surface: 240 22% 7%;
+  --surface-2: 240 20% 10%;
+  --border-subtle: 240 15% 18%;
+
+  --muted: 240 12% 65%;
+  --muted-foreground: 240 10% 55%;
+
+  --card: 240 22% 7%;
+  --card-foreground: 240 20% 97%;
+
+  --primary: 252 95% 65%;
+  --primary-foreground: 240 20% 98%;
+
+  --accent: 217 91% 60%;
+  --accent-2: 271 81% 66%;
+
+  --ring: 252 95% 65%;
+
+  --success: 152 69% 45%;
+  --warning: 38 92% 55%;
+  --danger: 0 84% 60%;
+
+  --gradient-brand: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(252 95% 65%) 50%, hsl(271 81% 66%) 100%);
+  --gradient-radial: radial-gradient(circle at 50% 0%, hsl(252 95% 65% / 0.18), transparent 60%);
+}
+
+.light {
+  --background: 240 30% 99%;
+  --foreground: 240 25% 8%;
+
+  --surface: 0 0% 100%;
+  --surface-2: 240 20% 97%;
+  --border-subtle: 240 15% 88%;
+
+  --muted: 240 10% 40%;
+  --muted-foreground: 240 8% 46%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 240 25% 8%;
+
+  --primary: 252 85% 55%;
+  --primary-foreground: 0 0% 100%;
+
+  --accent: 217 91% 52%;
+  --accent-2: 271 75% 56%;
+
+  --ring: 252 85% 55%;
+
+  --gradient-radial: radial-gradient(circle at 50% 0%, hsl(252 85% 55% / 0.12), transparent 60%);
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-surface: hsl(var(--surface));
+  --color-surface-2: hsl(var(--surface-2));
+  --color-border: hsl(var(--border-subtle));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-2: hsl(var(--accent-2));
+  --color-ring: hsl(var(--ring));
+  --color-success: hsl(var(--success));
+  --color-warning: hsl(var(--warning));
+  --color-danger: hsl(var(--danger));
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Base                                                                    */
+/* ---------------------------------------------------------------------- */
+* {
+  border-color: hsl(var(--border-subtle));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  background-image: var(--gradient-radial);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border-subtle));
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted)); }
+
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reusable utilities                                                     */
+/* ---------------------------------------------------------------------- */
+.text-gradient {
+  background: var(--gradient-brand);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.bg-gradient-brand {
+  background: var(--gradient-brand);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.glass {
+  background: hsl(var(--surface) / 0.6);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid hsl(var(--border-subtle));
+}
+
+.glass-strong {
+  background: hsl(var(--surface) / 0.85);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid hsl(var(--border-subtle));
+}
+
+.grid-fade-mask {
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 60%, transparent 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.section-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) {
+  .section-container { padding-inline: 2rem; }
+}
