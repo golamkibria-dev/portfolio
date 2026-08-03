@@ -83,15 +83,19 @@ export function Hero() {
             />
 
             <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-background transition-transform duration-500 hover:scale-105 sm:h-40 sm:w-40">
-              <Image
-                src="/profile.jpg"
-                alt="Golam Kibria"
-                fill
-                priority
-                sizes="160px"
-                className="rounded-full object-cover object-top"
-              />
-            </div>
+  <Image
+    src="/profile.jpg"
+    alt="Golam Kibria"
+    fill
+    priority
+    sizes="160px"
+    className="rounded-full object-cover object-top"
+  />
+</div>
+<span
+  className="absolute bottom-1 right-1 z-10 h-4 w-4 rounded-full border-2 border-background bg-success sm:h-5 sm:w-5"
+  aria-hidden="true"
+/>
           </motion.div>
         </motion.div>
       </div>
