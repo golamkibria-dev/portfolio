@@ -72,10 +72,20 @@ export function Hero() {
 
           <motion.div variants={item} className="relative mt-16 sm:mt-20">
             <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
-            <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl transition-transform duration-500 hover:scale-105 sm:h-40 sm:w-40">
+
+            {/* Slowly rotating gradient ring */}
+            <motion.div
+              className="absolute -inset-1.5 rounded-full"
+              style={{ background: "conic-gradient(from 0deg, #3b82f6, #a855f7, #ec4899, #3b82f6)" }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              aria-hidden="true"
+            />
+
+            <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-background transition-transform duration-500 hover:scale-105 sm:h-40 sm:w-40">
               <Image
                 src="/profile.jpg"
-                alt="Golam Kibria" 
+                alt="Golam Kibria"
                 fill
                 priority
                 sizes="160px"
