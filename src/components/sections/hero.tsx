@@ -1,12 +1,12 @@
 "use client";
-
-import { motion, type Variants } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight, Download, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { TypingText } from "@/components/common/typing-text";
 import { ParticleField } from "@/components/three/particle-field";
+import { Button } from "@/components/ui/button";
 import { SITE, TYPING_ROLES } from "@/lib/data";
+import { motion, type Variants } from "framer-motion";
+import { ArrowRight, Download, Sparkles } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const container: Variants = {
   hidden: {},
@@ -70,13 +70,18 @@ export function Hero() {
           </motion.div>
 
           <motion.div variants={item} className="relative mt-16 sm:mt-20">
-            <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
-            <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl sm:h-40 sm:w-40">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-gradient-brand font-heading text-4xl font-semibold text-white sm:text-5xl">
-                GK
-              </div>
-            </div>
-          </motion.div>
+  <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
+  <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl sm:h-40 sm:w-40">
+    <Image
+      src="/profile.jpg"
+      alt="Golam Kibria"
+      fill
+      priority
+      sizes="160px"
+      className="rounded-full object-cover"
+    />
+  </div>
+</motion.div>
         </motion.div>
       </div>
 
