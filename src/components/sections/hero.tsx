@@ -77,7 +77,7 @@ export function Hero() {
       alt="Golam Kibria"
       fill
       priority
-      sizes="160px"
+      sizes="120px"
       className="rounded-full object-cover"
     />
   </div>
