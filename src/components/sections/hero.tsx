@@ -75,7 +75,7 @@ export function Hero() {
             <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl transition-transform duration-500 hover:scale-105 sm:h-40 sm:w-40">
               <Image
                 src="/profile.jpg"
-                alt="Golam Kibria"
+                alt="Golam Kibria" 
                 fill
                 priority
                 sizes="160px"
