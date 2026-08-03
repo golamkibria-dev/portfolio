@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { GraduationCap, Compass, Target, Trophy } from "lucide-react";
 import { SectionHeading } from "@/components/common/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { ABOUT, ACHIEVEMENTS, EDUCATION, TIMELINE } from "@/lib/data";
+import { motion } from "framer-motion";
+import { Compass, GraduationCap, Target, Trophy } from "lucide-react";
+import Image from "next/image";
 
 export function About() {
   return (
@@ -15,6 +16,22 @@ export function About() {
         <div className="grid gap-16 lg:grid-cols-5">
           {/* Story + mission/vision */}
           <div className="lg:col-span-2">
+            <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative mb-8 aspect-[4/3] w-full max-w-sm overflow-hidden rounded-2xl border border-border shadow-xl"
+          >
+            <Image
+              src="/profile.jpg"
+              alt="Golam Kibria at work"
+              fill
+              sizes="(max-width: 1024px) 100vw, 400px"
+              className="object-cover object-[center_15%]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+          </motion.div>
             <div className="space-y-5 text-muted-foreground">
               {ABOUT.story.map((p, i) => (
                 <motion.p

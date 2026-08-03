@@ -89,7 +89,7 @@ export function Hero() {
                 fill
                 priority
                 sizes="160px"
-                className="rounded-full object-cover"
+                className="rounded-full object-cover object-top"
               />
             </div>
           </motion.div>
