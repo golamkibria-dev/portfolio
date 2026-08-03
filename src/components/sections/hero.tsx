@@ -71,13 +71,17 @@ export function Hero() {
 
           <motion.div variants={item} className="relative mt-16 sm:mt-20">
   <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
-  <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl sm:h-40 sm:w-40">
+
+  {/* Rotating gradient ring */}
+  <motion.div variants={item} className="relative mt-16 sm:mt-20">
+  <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
+  <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl transition-transform duration-500 hover:scale-105 sm:h-40 sm:w-40">
     <Image
       src="/profile.jpg"
       alt="Golam Kibria"
       fill
       priority
-      sizes="120px"
+      sizes="160px"
       className="rounded-full object-cover"
     />
   </div>
