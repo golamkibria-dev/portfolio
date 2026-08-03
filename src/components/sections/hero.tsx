@@ -1,4 +1,5 @@
 "use client";
+
 import { TypingText } from "@/components/common/typing-text";
 import { ParticleField } from "@/components/three/particle-field";
 import { Button } from "@/components/ui/button";
@@ -19,14 +20,14 @@ const item: Variants = {
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-20">
+    <section className="relative flex min-h-svh items-center overflow-hidden pt-28 pb-20">
       <ParticleField />
 
       {/* Ambient gradient orbs */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
         <div className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-accent/25 blur-[100px] animate-float" />
         <div className="absolute -right-24 top-40 h-96 w-96 rounded-full bg-accent-2/20 blur-[120px] animate-float" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute inset-x-0 top-0 h-[600px] bg-[linear-gradient(to_right,hsl(var(--border-subtle))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border-subtle))_1px,transparent_1px)] bg-[size:56px_56px] opacity-30 grid-fade-mask" />
+        <div className="absolute inset-x-0 top-0 h-150 bg-[linear-gradient(to_right,hsl(var(--border-subtle))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border-subtle))_1px,transparent_1px)] bg-size-[56px_56px] opacity-30 grid-fade-mask" />
       </div>
 
       <div className="section-container">
@@ -70,22 +71,18 @@ export function Hero() {
           </motion.div>
 
           <motion.div variants={item} className="relative mt-16 sm:mt-20">
-  <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
-
-  {/* Rotating gradient ring */}
-  <motion.div variants={item} className="relative mt-16 sm:mt-20">
-  <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
-  <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl transition-transform duration-500 hover:scale-105 sm:h-40 sm:w-40">
-    <Image
-      src="/profile.jpg"
-      alt="Golam Kibria"
-      fill
-      priority
-      sizes="160px"
-      className="rounded-full object-cover"
-    />
-  </div>
-</motion.div>
+            <div className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
+            <div className="glass-strong relative h-32 w-32 overflow-hidden rounded-full p-1.5 shadow-2xl transition-transform duration-500 hover:scale-105 sm:h-40 sm:w-40">
+              <Image
+                src="/profile.jpg"
+                alt="Golam Kibria"
+                fill
+                priority
+                sizes="160px"
+                className="rounded-full object-cover"
+              />
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 
