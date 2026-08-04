@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, XIcon } from "@/components/common/brand-icons";
 import { NAV_LINKS, SITE, SOCIAL_LINKS } from "@/lib/data";
+import { Mail } from "lucide-react";
+import Link from "next/link";
 
 const ICONS = { github: GithubIcon, linkedin: LinkedinIcon, twitter: XIcon, mail: Mail };
 
@@ -73,8 +73,8 @@ export function Footer() {
       </div>
 
       <div className="section-container flex flex-col items-center justify-between gap-3 border-t border-border py-6 text-xs text-muted-foreground sm:flex-row">
-        <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
-        <p>Built with Next.js, TypeScript & Tailwind CSS.</p>
+       <center><p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p></center>
+       {/* <p>Built with Next.js, TypeScript & Tailwind CSS.</p> */}
       </div>
     </footer>
   );
