@@ -73,7 +73,7 @@ export function Footer() {
       </div>
 
       <div className="section-container flex flex-col items-center justify-between gap-3 border-t border-border py-6 text-xs text-muted-foreground sm:flex-row">
-       <center><p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p></center>
+       <p className="text-center">© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
        {/* <p>Built with Next.js, TypeScript & Tailwind CSS.</p> */}
       </div>
     </footer>
