@@ -1,17 +1,22 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
-import { Command } from "cmdk";
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-import * as DialogPrimitive from "@radix-ui/react-dialog";
-import {
-  User, Wrench, FolderGit2, Briefcase, MessageSquare, Sun,
-  Mail, FileDown, Search,
-} from "lucide-react";
-import { useTheme } from "next-themes";
 import { GithubIcon, LinkedinIcon } from "@/components/common/brand-icons";
 import { NAV_LINKS, SOCIAL_LINKS } from "@/lib/data";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import { Command } from "cmdk";
+import {
+    Briefcase,
+    FolderGit2,
+    Mail,
+    MessageSquare,
+    Search,
+    Sun,
+    User, Wrench
+} from "lucide-react";
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   About: User,
@@ -106,13 +111,7 @@ export function CommandPalette() {
                   <Sun className="h-4 w-4 text-accent" />
                   Toggle theme
                 </Command.Item>
-                <Command.Item
-                  onSelect={() => go("/resume.pdf")}
-                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm data-[selected=true]:bg-surface-2"
-                >
-                  <FileDown className="h-4 w-4 text-accent" />
-                  Download résumé
-                </Command.Item>
+
               </Command.Group>
 
               <Command.Group heading="Social" className="px-2 py-1.5 text-xs font-medium text-muted-foreground [&_[cmdk-group-heading]]:mb-1">

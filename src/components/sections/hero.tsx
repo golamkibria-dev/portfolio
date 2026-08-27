@@ -5,7 +5,7 @@ import { ParticleField } from "@/components/three/particle-field";
 import { Button } from "@/components/ui/button";
 import { SITE, TYPING_ROLES } from "@/lib/data";
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -62,12 +62,7 @@ export function Hero() {
             <Button asChild size="lg" variant="secondary">
               <Link href="#projects">View Projects</Link>
             </Button>
-            <Button asChild size="lg" variant="ghost">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <Download className="h-4 w-4" />
-                Download Resume
-              </a>
-            </Button>
+
           </motion.div>
 
           <motion.div variants={item} className="relative mt-16 sm:mt-20">
