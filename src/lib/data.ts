@@ -70,7 +70,7 @@ export const ACHIEVEMENTS = [
 
 export const TIMELINE = [
   {
-    year: "2024 — Present",
+    
     title: "Founder & Principal Engineer",
     org: "Novusio",
     description:
