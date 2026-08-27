@@ -70,22 +70,11 @@ export const ACHIEVEMENTS = [
 
 export const TIMELINE = [
   {
-    
     title: "Founder & Principal Engineer",
     org: "Novusio",
     description:
       "Advising startups on AI product strategy and architecture; building production-grade MVPs end-to-end.",
   },
-  /**
-  {
-    /**year: "2022 — 2024",
-    title: "Senior Software Engineer",
-    org: "Tech Company",
-    description:
-      "Led a team of 6 building a real-time analytics platform. Reduced infra costs 38% through architecture redesign.",
-
-  },
-  */
   {
     year: "2023 — 2026",
     title: "Software Engineer",
