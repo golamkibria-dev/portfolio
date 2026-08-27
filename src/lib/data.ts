@@ -55,7 +55,7 @@ export const ABOUT = {
 export const EDUCATION = [
   {
     degree: "B.Sc. in Computer Science & Engineering",
-    institution: "University of Dhaka",
+    institution: "IUBAT - International University of Business Agriculture and Technology",
     period: "2016 — 2020",
     detail: "Focus on distributed systems, algorithms, and applied machine learning.",
   },
@@ -93,7 +93,7 @@ export const TIMELINE = [
   {
     year: "2016 — 2020",
     title: "B.Sc. Computer Science",
-    org: "University of Dhaka",
+    org: "IUBAT - International University of Business Agriculture and Technology",
     description: "Graduated with distinction; teaching assistant for Data Structures & Algorithms.",
   },
 ] as const;
