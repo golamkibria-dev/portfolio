@@ -5,21 +5,21 @@
 
 export const SITE = {
   name: "Golam Kibria",
-  role: "Senior Software Engineer · AI Developer · Entrepreneur",
+  role: "Software Engineer · AI Developer · Entrepreneur",
   tagline: "I build fast, intelligent, and beautifully engineered products.",
-  url: "https://golamkibria.dev",
-  email: "hello@golamkibria.dev",
+  url: "https://golamkibria.vercel.app/",
+  email: "golam.kibria.forge@gmail.com",
   location: "Dhaka, Bangladesh",
   availability: "Available for select freelance & full-time roles",
   description:
-    "Portfolio of Golam Kibria — a senior software engineer and AI developer specializing in full-stack web applications, machine learning products, and automation systems.",
+    "Portfolio of Golam Kibria — a software engineer and AI developer specializing in full-stack web applications, machine learning products, and automation systems.",
 };
 
 export const SOCIAL_LINKS = [
   { label: "GitHub", href: "https://github.com/golamkibria", icon: "github" },
   { label: "LinkedIn", href: "https://linkedin.com/in/golamkibria", icon: "linkedin" },
   { label: "X / Twitter", href: "https://x.com/golamkibria", icon: "twitter" },
-  { label: "Email", href: "mailto:hello@golamkibria.dev", icon: "mail" },
+  { label: "Email", href: "mailto:golam.kibria.forge@gmail.com", icon: "mail" },
 ] as const;
 
 export const NAV_LINKS = [
@@ -56,7 +56,7 @@ export const EDUCATION = [
   {
     degree: "B.Sc. in Computer Science & Engineering",
     institution: "IUBAT - International University of Business Agriculture and Technology",
-    period: "2016 — 2020",
+    period: "2019 — 2023",
     detail: "Focus on distributed systems, algorithms, and applied machine learning.",
   },
 ];
@@ -72,26 +72,26 @@ export const TIMELINE = [
   {
     year: "2024 — Present",
     title: "Founder & Principal Engineer",
-    org: "Independent / Consulting",
+    org: "Novusio",
     description:
       "Advising startups on AI product strategy and architecture; building production-grade MVPs end-to-end.",
   },
   {
-    year: "2022 — 2024",
+    /**year: "2022 — 2024",
     title: "Senior Software Engineer",
     org: "Tech Company",
     description:
-      "Led a team of 6 building a real-time analytics platform. Reduced infra costs 38% through architecture redesign.",
+      "Led a team of 6 building a real-time analytics platform. Reduced infra costs 38% through architecture redesign.",*/
   },
   {
-    year: "2020 — 2022",
+    year: "2023 — 2026",
     title: "Software Engineer",
     org: "Tech Company",
     description:
       "Owned core backend services powering the company's flagship product; shipped 40+ features to production.",
   },
   {
-    year: "2016 — 2020",
+    year: "2019 — 2023",
     title: "B.Sc. Computer Science",
     org: "IUBAT - International University of Business Agriculture and Technology",
     description: "Graduated with distinction; teaching assistant for Data Structures & Algorithms.",
