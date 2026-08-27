@@ -13,7 +13,6 @@ import { LoadingScreen } from "@/components/common/loading-screen";
 import { ScrollProgressBar } from "@/components/common/scroll-progress-bar";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
-import { ServiceWorkerRegister } from "@/components/providers/service-worker-register";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { ToastProvider } from "@/hooks/use-toast";
@@ -61,7 +60,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-  manifest: "/manifest.webmanifest",
 };
 
 export const viewport: Viewport = {
@@ -121,7 +119,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <BackToTop />
             <CommandPalette />
             <Toaster />
-            <ServiceWorkerRegister />
           </ToastProvider>
         </ThemeProvider>
       </body>

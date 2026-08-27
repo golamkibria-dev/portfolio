@@ -1,5 +1,5 @@
-import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/data";
+import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -7,7 +7,6 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: SITE.name,
     description: SITE.description,
     start_url: "/",
-    display: "standalone",
     background_color: "#0a0a12",
     theme_color: "#0a0a12",
     icons: [
