@@ -312,7 +312,7 @@ export const TESTIMONIALS = [
     name: "Sarah Chen",
     role: "VP Engineering, Fintech Startup",
     quote:
-      "Golam rebuilt our data pipeline from the ground up and cut our infrastructure costs nearly in half — without a single hour of downtime.",
+      "Golam Kibria rebuilt our data pipeline from the ground up and cut our infrastructure costs nearly in half — without a single hour of downtime.",
     avatar: "/avatars/placeholder-1.svg",
   },
   {
