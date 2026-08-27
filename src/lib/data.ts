@@ -42,7 +42,7 @@ export const TYPING_ROLES = [
 
 export const ABOUT = {
   story: [
-    "I discovered my passion for software development during university, where I began turning ideas into real, working products. What started as a curiosity quickly became a deep interest in building thoughtful, reliable, and meaningful digital experiences.",
+    "I discovered my passion for software development by turning ideas into real, working products. What started as a curiosity quickly became a deep interest in building thoughtful, reliable, and meaningful digital experiences.",
     "Today, I design and build production-ready web applications that combine clean engineering with modern technologies, from scalable full-stack platforms to intelligent solutions powered by AI.",
     "I care deeply about craft — the kind of detail that most users never consciously notice, but always feel. For me, great software isn't just about making something work; it's about making it intuitive, reliable, and genuinely valuable.",
   ],
