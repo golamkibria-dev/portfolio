@@ -42,9 +42,9 @@ export const TYPING_ROLES = [
 
 export const ABOUT = {
   story: [
-    "I started writing code at fifteen, drawn less to the syntax than to the feeling of building something out of nothing. A decade later, that feeling hasn't faded — it's just gotten more ambitious.",
-    "Today I design and ship production systems that blend clean engineering with applied AI: from real-time platforms serving millions of requests to intelligent automations that quietly save teams hundreds of hours a month.",
-    "I care deeply about craft — the kind of detail that most users never consciously notice, but always feel.",
+    "I discovered my passion for software development during university, where I began turning ideas into real, working products. What started as a curiosity quickly became a deep interest in building thoughtful, reliable, and meaningful digital experiences.",
+    "Today, I design and build production-ready web applications that combine clean engineering with modern technologies, from scalable full-stack platforms to intelligent solutions powered by AI.",
+    "I care deeply about craft — the kind of detail that most users never consciously notice, but always feel. For me, great software isn't just about making something work; it's about making it intuitive, reliable, and genuinely valuable.",
   ],
   mission:
     "To build technology that is fast, humane, and quietly powerful — software that gets out of the way and lets people do their best work.",
