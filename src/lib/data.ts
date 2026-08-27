@@ -97,7 +97,7 @@ export const TIMELINE = [
     year: "2019 — 2023",
     title: "B.Sc. Computer Science",
     org: "IUBAT - International University of Business Agriculture and Technology",
-    description: "Graduated with distinction; teaching assistant for Data Structures & Algorithms.",
+    description: "Graduated with a strong foundation in software development, problem-solving, and building practical digital solutions.",
   },
 ] as const;
 
