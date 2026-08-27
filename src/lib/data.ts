@@ -33,11 +33,8 @@ export const NAV_LINKS = [
 ] as const;
 
 export const TYPING_ROLES = [
-  "Senior Software Engineer",
-  "AI Solutions Developer",
-  "Full-Stack Architect",
-  "Automation Specialist",
-  "Startup Founder",
+  "Software Engineer",
+  "AI Developer",
 ];
 
 export const ABOUT = {
