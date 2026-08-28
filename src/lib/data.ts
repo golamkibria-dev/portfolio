@@ -258,14 +258,6 @@ export const PROJECTS: Project[] = [
 ];
 
 export const PROJECT_CATEGORIES = ["All", "Web App", "AI / ML", "Automation", "Mobile"] as const;
-
-export const CERTIFICATES = [
-  { title: "AWS Certified Solutions Architect", issuer: "Amazon Web Services", year: "2023", file: "#" },
-  { title: "TensorFlow Developer Certificate", issuer: "Google", year: "2022", file: "#" },
-  { title: "Professional Scrum Master I", issuer: "Scrum.org", year: "2021", file: "#" },
-  { title: "Meta Front-End Developer", issuer: "Meta", year: "2021", file: "#" },
-];
-
 export const SERVICES = [
   {
     title: "Web Development",

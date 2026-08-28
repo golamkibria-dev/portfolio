@@ -52,7 +52,6 @@ export function Footer() {
 
             <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground">Blog</Link></li>
             <li><a href="#faq" className="text-sm text-muted-foreground hover:text-foreground">FAQ</a></li>
-            <li><a href="#certificates" className="text-sm text-muted-foreground hover:text-foreground">Certificates</a></li>
           </ul>
         </div>
 
