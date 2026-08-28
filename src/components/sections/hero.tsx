@@ -44,7 +44,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 min-h-8 font-mono text-base text-muted-foreground sm:text-lg">
-            I&apos;m a <TypingText words={TYPING_ROLES} className="font-semibold text-foreground" />
+            I&apos;m <TypingText words={TYPING_ROLES} className="font-semibold text-foreground" />
           </motion.p>
 
           <motion.p variants={item} className="mt-5 max-w-2xl text-balance text-muted-foreground sm:text-lg">
