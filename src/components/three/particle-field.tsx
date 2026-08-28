@@ -1,18 +1,16 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
-const PARTICLE_COUNT = 900;
-
-function Particles() {
+function Particles({ count }: { count: number }) {
   const pointsRef = useRef<THREE.Points>(null);
 
   const [positions] = useState<Float32Array>(() => {
-    const arr = new Float32Array(PARTICLE_COUNT * 3);
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
+    const arr = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
       const radius = 6 + Math.random() * 6;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(2 * Math.random() - 1);
@@ -48,23 +46,26 @@ function Particles() {
 
 /**
  * A lightweight, purely decorative particle field used behind the hero.
- * Pauses on reduced-motion and is skipped entirely on small/low-power
- * viewports to keep Lighthouse performance scores high.
+ * Pauses on reduced-motion. Uses a lighter particle count and lower
+ * pixel ratio on small/mobile viewports to stay performant.
  */
 export function ParticleField() {
   const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
   const isSmall = useMediaQuery("(max-width: 640px)");
 
-  if (reducedMotion || isSmall) return null;
+  const particleCount = useMemo(() => (isSmall ? 250 : 900), [isSmall]);
+  const dpr = useMemo<[number, number]>(() => (isSmall ? [1, 1] : [1, 1.5]), [isSmall]);
+
+  if (reducedMotion) return null;
 
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 opacity-70" aria-hidden="true">
       <Canvas
         camera={{ position: [0, 0, 9], fov: 50 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
+        dpr={dpr}
+        gl={{ antialias: !isSmall, alpha: true, powerPreference: "low-power" }}
       >
-        <Particles />
+        <Particles count={particleCount} />
       </Canvas>
     </div>
   );
