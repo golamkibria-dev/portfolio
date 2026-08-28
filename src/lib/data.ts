@@ -285,31 +285,6 @@ export const SERVICES = [
     icon: "compass",
   },
 ] as const;
-
-export const TESTIMONIALS = [
-  {
-    name: "Sarah Chen",
-    role: "VP Engineering, Fintech Startup",
-    quote:
-      "Golam Kibria rebuilt our data pipeline from the ground up and cut our infrastructure costs nearly in half — without a single hour of downtime.",
-    avatar: "/avatars/placeholder-1.svg",
-  },
-  {
-    name: "Marcus Lee",
-    role: "Founder, SaaS Company",
-    quote:
-      "The AI copilot he shipped for our support team paid for itself in six weeks. Genuinely one of the best engineers we've worked with.",
-    avatar: "/avatars/placeholder-2.svg",
-  },
-  {
-    name: "Priya Nair",
-    role: "Product Lead",
-    quote:
-      "Rare combination of deep technical skill and real product sense. Every deliverable felt polished beyond what we asked for.",
-    avatar: "/avatars/placeholder-3.svg",
-  },
-];
-
 export const FAQS = [
   {
     q: "What kind of projects do you take on?",

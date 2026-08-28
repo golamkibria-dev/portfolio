@@ -7,7 +7,6 @@ import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { Services } from "@/components/sections/services";
 import { Skills } from "@/components/sections/skills";
-import { Testimonials } from "@/components/sections/testimonials";
 import { Separator } from "@/components/ui/separator";
 
 export default function HomePage() {
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Experience />
       <Services />
       <GithubStats />
-      <Testimonials />
       <FaqNewsletter />
       <Contact />
     </>
